@@ -1,2 +1,2 @@
 # URL-Validator
-Python3 script that valid urls
+This Python script checks a list of URLs for validity and writes the valid URLs to one file and the invalid URLs to another file. The script takes a filename as input and allows the user to specify output filenames for the valid and invalid URLs. The script uses the requests library to send HEAD requests to each URL and checks the response status code. URLs with status codes less than 400 are considered valid and are written to the valid URLs file. URLs with status codes of 400 or higher, or URLs that fail to connect, are considered invalid and are written to the invalid URLs file with an error message. The script also includes an option to ignore empty lines in the input file.
