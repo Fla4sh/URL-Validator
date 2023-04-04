@@ -17,17 +17,18 @@ pip3 install -r requirements.txt
 # One Line Command:
 
 ```
-python3 url.py filename.txt --e --ov valid.txt --ox invalid.txt
+python script_name.py input_file_name [--ov output_valid_file_name] [--ox output_invalid_file_name] [--e] [--f] [--r LOWER_RANGE UPPER_RANGE]
+
 ```
 
 # Help
 
 ```
-> filename: The path to the file containing the list of URLs to be validated. This argument is required.
+> -h or --help: To view the help message
+> --ov: this option specifies the output filename for the valid URLs. If not specified, the default filename is "valid.txt".
+> --ox: this option specifies the output filename for the invalid URLs. If not specified, the default filename is "invalid.txt".
+> --e: this option is a flag that indicates whether to ignore empty lines in the input file. If specified, empty lines will be skipped.
+> --f: this option is a flag that indicates whether to follow redirects. If specified, redirects will be followed.
+> --r: this option specifies the range of response codes that are considered valid. By default, the range is 200-299. For example, if the user wants to consider any response code between 400 and 499 as valid, they can use the option --r 400 499.
 
-> --ov: Optional argument to specify the output filename for valid URLs. The default value is valid.txt.
-
-> --ox: Optional argument to specify the output filename for invalid URLs. The default value is invalid.txt.
-
-> --e: Optional argument to indicate whether to ignore empty lines in the input file.
 ```
